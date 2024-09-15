@@ -1,12 +1,12 @@
 {
   "mainAssemblyName": "LojaEncapsuladosBlazor",
   "resources": {
-    "hash": "sha256-HPw/6HV04XF9nsGvA0D/OM/NHzLptvF0X1WmzjdDjyQ=",
+    "hash": "sha256-JclrMzPc3U6Cd7ncKo8Rmd1Fv5FCQJLUsm/k6IEqcHo=",
     "jsModuleNative": {
-      "dotnet.native.8.0.8.nopd0s22t0.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
+      "dotnet.native.8.0.8.93i67mqfmb.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.8.4srqmdl14r.js": "sha256-0Dpj/NkVD5WqSC16ZvJLmlc38iv9+Je+umYBVOycPVU="
+      "dotnet.runtime.8.0.8.80cvijctdx.js": "sha256-0Dpj/NkVD5WqSC16ZvJLmlc38iv9+Je+umYBVOycPVU="
     },
     "wasmNative": {
       "dotnet.native.wasm": "sha256-OcUTcd7qQceenWEF93409WZcaXp2qQbEyhdchog4RUE="
@@ -208,10 +208,10 @@
       "mscorlib.wasm": "sha256-cDuLeL3OCtVtiid/dyex1MVgbuzDSRwZxKzuP2Dp4mg=",
       "netstandard.wasm": "sha256-A0h86SDieTMoU/wU2JTszWCsUmMuguDcbap0b0BzsmI=",
       "System.Private.CoreLib.wasm": "sha256-/0DNIm/T0C07X7Tuz5uR8JvVCoAfEE2MnfPUSjyS9xc=",
-      "LojaEncapsuladosBlazor.wasm": "sha256-CdEWar2m0VDOGWL/HEGNT8326q3meBeOCKkGN8i0Sms="
+      "LojaEncapsuladosBlazor.wasm": "sha256-OyU8VKEYC+NoPJut7011t9Y2T8wz4WVzmEj58Idjd6A="
     },
     "pdb": {
-      "LojaEncapsuladosBlazor.pdb": "sha256-5c/bYdfSXv61TuxtyRpSxpmLPXS++3Y22BNmgTTvucc="
+      "LojaEncapsuladosBlazor.pdb": "sha256-EV5aJzd1O02a144dObt6qBZvQ0o0Glfo1sk6iIzCV6A="
     }
   },
   "cacheBootResources": true,

@@ -9,6 +9,7 @@
 	  <DefaultItemExcludes>**\*.cshtml</DefaultItemExcludes>
      <BlazorEnableCompression>false</BlazorEnableCompression>
        <OutputPath>docs\</OutputPath>
+        <PublishDir>docs/</PublishDir>
   <PublishDir>wwwroot</PublishDir>
     
   </PropertyGroup>

@@ -1,0 +1,39 @@
+﻿@page "/"
+@using LojaEncapsuladosBlazor.Models
+@inject NavigationManager NavManager
+
+<PageTitle>Loja de Produtos Encapsulados</PageTitle>
+
+<h1>Loja de Produtos Encapsulados</h1>
+
+<section class="products">
+    @foreach (var produto in Produtos)
+    {
+        <div class="product">
+            <img src="@produto.ImagemUrl" alt="@produto.Nome" class="product-image" />
+            <h2>@produto.Nome</h2>
+            <p>Preço: R$ @produto.Preco,00</p>
+            <button @onclick="() => SelectProduct(produto.Id)">Selecionar</button>
+        </div>
+    }
+</section>
+
+@code {
+    private List<Produto> Produtos = new List<Produto>();
+
+    protected override void OnInitialized()
+    {
+        // Inicializando a lista de produtos
+        Produtos = new List<Produto>
+        {
+            new Produto { Id = 1, Nome = "Suplemento A", Preco = 50, ImagemUrl = "images/suplementoA.jpg" },
+            new Produto { Id = 2, Nome = "Suplemento B", Preco = 75, ImagemUrl = "images/suplementoB.jpg" }
+        };
+    }
+
+    private void SelectProduct(int productId)
+    {
+        // Redireciona para a página de quantidade com o ID do produto selecionado
+        NavManager.NavigateTo($"/quantidade/{productId}");
+    }
+}

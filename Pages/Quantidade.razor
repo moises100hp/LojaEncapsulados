@@ -1,0 +1,65 @@
+﻿@page "/quantidade/{id:int}"
+@using LojaEncapsuladosBlazor.Models
+@inject NavigationManager NavigationManager
+
+<PageTitle>Selecionar Quantidade</PageTitle>
+
+@if (ProdutoSelecionado != null)
+{
+    <h1>@ProdutoSelecionado.Nome</h1>
+    <img src="@ProdutoSelecionado.ImagemUrl" alt="@ProdutoSelecionado.Nome" class="product-image" />
+    <p>Preço: R$ @ProdutoSelecionado.Preco,00</p>
+
+    <div class="quantity-selector">
+        <button @onclick="DecrementQuantity">-</button>
+        <input type="text" value="@quantidadeProduto" readonly class="quantity-input" />
+        <button @onclick="IncrementQuantity">+</button>
+    </div>
+
+    <p>Total: R$ @ValorTotal,00</p>
+
+    <button class="pay-button" @onclick="RealizarPagamento">Realizar Pagamento</button>
+}
+else
+{
+    <p>Produto não encontrado.</p>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Produto ProdutoSelecionado;
+    private int quantidadeProduto = 1;
+    private decimal ValorTotal => ProdutoSelecionado?.Preco * quantidadeProduto ?? 0;
+
+    private List<Produto> Produtos = new List<Produto>
+    {
+        new Produto { Id = 1, Nome = "Suplemento A", Preco = 50, ImagemUrl = "images/suplementoA.jpg" },
+        new Produto { Id = 2, Nome = "Suplemento B", Preco = 75, ImagemUrl = "images/suplementoB.jpg" }
+    };
+
+    protected override void OnInitialized()
+    {
+        // Busca o produto pelo ID passado na URL
+        ProdutoSelecionado = Produtos.FirstOrDefault(p => p.Id == Id);
+    }
+
+    private void IncrementQuantity()
+    {
+        quantidadeProduto++;
+    }
+
+    private void DecrementQuantity()
+    {
+        if (quantidadeProduto > 1)
+        {
+            quantidadeProduto--;
+        }
+    }
+
+    private void RealizarPagamento()
+    {
+        // Simula o redirecionamento para a página de pagamento
+        string urlPagamento = "https://pagamento.exemplo.com";
+        NavigationManager.NavigateTo(urlPagamento, true);
+    }
+}

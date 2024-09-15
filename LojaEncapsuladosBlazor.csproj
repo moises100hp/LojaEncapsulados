@@ -8,6 +8,7 @@
 	  <RootNamespace>LojaEncapsuladosBlazor</RootNamespace>
 	  <DefaultItemExcludes>**\*.cshtml</DefaultItemExcludes>
      <BlazorEnableCompression>false</BlazorEnableCompression>
+       <OutputPath>docs\</OutputPath>
   <PublishDir>wwwroot</PublishDir>
     
   </PropertyGroup>

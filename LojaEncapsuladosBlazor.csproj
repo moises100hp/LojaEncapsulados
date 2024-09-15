@@ -11,7 +11,8 @@
        <OutputPath>docs\</OutputPath>
         <PublishDir>docs/</PublishDir>
   <PublishDir>wwwroot</PublishDir>
-     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
+       <PublishTrimmed>true</PublishTrimmed>
+  <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
   </PropertyGroup>
 
   <ItemGroup>
